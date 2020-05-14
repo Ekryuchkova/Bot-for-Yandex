@@ -12,10 +12,10 @@ let btnK = document.getElementsByClassName('button__text')[0];
 let keywords = ["Гобой", "Как звучит флейта", "Что такое валторна", "Как выглядит тромбон", "Музыкальные диктанты онлайн", "Виолончель"];
 let keyword = keywords[getRandom(0,keywords.length)];
 let goNextPage = true;
-//let pnnext = ; не получилось прицепиться к кнопке "дальше"
+//let pnnext = document.getElementsByClassName('wrc1 wrc_icon wrc_injected wrc_icon_right')[0];
 
 if (btnK!=undefined){
-    writeWord(keyword);
+    writeWord('барабанное шоу');
 }
 let links = document.links;
 for(let i=0; i<links.length; i++){
