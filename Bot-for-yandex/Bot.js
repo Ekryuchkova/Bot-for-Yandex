@@ -31,7 +31,7 @@ if (location.host == "yandex.ru") {
 else {
     if (getRandom(0,100)>20){
         let index = getRandom(0,links.length);
-        if (links[index].href.indexOf(site)!=-1)
+        if (links[index].href.indexOf(site)!=-1 && links[index].href.indexOf('#')==-1 && links[index].href.indexOf('.jpg')==-1)
             setTimeout(()=>{links[index].click();}, 5000);
         else location.href = `https://${site}/`;
     }
@@ -45,12 +45,14 @@ function getRandom(min, max){
 function writeWord(keyword){
   let i = 0;
   let timerId = setInterval(()=>{
-    document.getElementsByName('text')[0].value += keyword[i];
-    i++;
-    if (i==keyword.length) {
-        clearInterval(timerId);
-        btnK.click();
+    setTimeout(()=>{
+        document.getElementsByName('text')[0].value += keyword[i];
+        i++;
+        if (i==keyword.length) {
+            clearInterval(timerId);
+            btnK.click();
     }
+    },getRandom(0,1000));
   },300);
 }
 
