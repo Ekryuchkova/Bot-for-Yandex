@@ -42,6 +42,6 @@ $nikolay = new Person("Nikolay","Ivanov",10,$maxim,$julia)
 $anna = new Person("Anna","Ivanova",8,$maxim,$julia,$petr)
 
 
-echo $anna->tellAboutYourParents();
-echo $anna->sayHi();<br>
+echo $anna->tellAboutYourParents();<br>
+echo $anna->sayHi();
 ?>
