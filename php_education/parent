@@ -9,26 +9,22 @@ class Person{
   public $grandma1;
   public $grandpa2;
   public $grandma2;
-  function __construct($n,$l,$a,$m=null,$f=null,$gp1=null,$gm1=null,$gp2=null,$gm2=null){
+  function __construct($n,$l,$a,$m=null,$f=null){
     $this->name = $n;
     $this->lastname = $l;
     $this->age = $a;
     $this->mother = $m;
     $this->father = $f;
-    $this->grandpa1 = $gp1;
-    $this->grandma1 = $gm1;
-    $this->grandpa2 = $gp2;
-    $this->grandma2 = $gm2;
   }
   public function sayHi(){
     echo "Hi, my name is ".$this->name;
   }
   public function tellAboutYourParents(){
     $str = '';
-      $str = "My grandma on my mother's side: ".$this->grandma2->name."<br>
-              My grandpa on my mother's side: ".$this->grandpa2->name."<br>
-              My grandma on my father's side: ".$this->grandma1->name."<br>
-              My grandpa on my father's side: ".$this->grandpa1->name."<br>
+      $str = "My grandma on my mother's side: ".$this->mother->mother->name."<br>
+              My grandpa on my mother's side: ".$this->mother->father->name."<br>
+              My grandma on my father's side: ".$this->father->mother->name."<br>
+              My grandpa on my father's side: ".$this->father->father->name."<br>
               My mother: ".$this->mother->name."<br>
               My father: ".$this->father->name."<br>";
     return $str;
@@ -41,9 +37,9 @@ $alexey = new Person("Alexey","Petrov",60)
 $olga = new Person("Olga","Petrova",60)
 $maxim = new Person("Maxim","Ivanov",35,$petr,$maria)
 $julia = new Person("Julia","Ivanova",35,$alexey,$olga)
-$alexander = new Person("Alexander","Ivanov",12,$maxim,$julia,$petr,$maria,$alexey,$olga)
-$nikolay = new Person("Nikolay","Ivanov",10,$maxim,$julia,$petr,$maria,$alexey,$olga)
-$anna = new Person("Anna","Ivanova",8,$maxim,$julia,$petr,$maria,$alexey,$olga)
+$alexander = new Person("Alexander","Ivanov",12,$maxim,$julia)
+$nikolay = new Person("Nikolay","Ivanov",10,$maxim,$julia)
+$anna = new Person("Anna","Ivanova",8,$maxim,$julia,$petr)
 
 
 echo $anna->tellAboutYourParents();
