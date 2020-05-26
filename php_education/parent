@@ -5,10 +5,6 @@ class Person{
   public $age;
   public $father;
   public $mother;
-  public $grandpa1;
-  public $grandma1;
-  public $grandpa2;
-  public $grandma2;
   function __construct($n,$l,$a,$m=null,$f=null){
     $this->name = $n;
     $this->lastname = $l;
