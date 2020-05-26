@@ -35,7 +35,7 @@ $maxim = new Person("Maxim","Ivanov",35,$petr,$maria)
 $julia = new Person("Julia","Ivanova",35,$alexey,$olga)
 $alexander = new Person("Alexander","Ivanov",12,$maxim,$julia)
 $nikolay = new Person("Nikolay","Ivanov",10,$maxim,$julia)
-$anna = new Person("Anna","Ivanova",8,$maxim,$julia,$petr)
+$anna = new Person("Anna","Ivanova",8,$maxim,$julia)
 
 
 echo $anna->tellAboutYourParents();<br>
