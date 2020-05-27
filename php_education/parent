@@ -27,17 +27,17 @@ class Person{
   }
 }
 
-$petr = new Person("Petr","Ivanov",60)
-$maria = new Person("Maria","Ivanova",60)
-$alexey = new Person("Alexey","Petrov",60)
-$olga = new Person("Olga","Petrova",60)
-$maxim = new Person("Maxim","Ivanov",35,$petr,$maria)
-$julia = new Person("Julia","Ivanova",35,$alexey,$olga)
-$alexander = new Person("Alexander","Ivanov",12,$maxim,$julia)
-$nikolay = new Person("Nikolay","Ivanov",10,$maxim,$julia)
-$anna = new Person("Anna","Ivanova",8,$maxim,$julia)
+$petr = new Person("Petr","Ivanov",60);
+$maria = new Person("Maria","Ivanova",60);
+$alexey = new Person("Alexey","Petrov",60);
+$olga = new Person("Olga","Petrova",60);
+$maxim = new Person("Maxim","Ivanov",35,$petr,$maria);
+$julia = new Person("Julia","Ivanova",35,$alexey,$olga);
+$alexander = new Person("Alexander","Ivanov",12,$maxim,$julia);
+$nikolay = new Person("Nikolay","Ivanov",10,$maxim,$julia);
+$anna = new Person("Anna","Ivanova",8,$maxim,$julia);
 
 
-echo $anna->tellAboutYourParents();<br>
+echo $anna->tellAboutYourParents();
 echo $anna->sayHi();
 ?>
